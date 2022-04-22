@@ -3,8 +3,24 @@ html {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 .container {
-  min-height: 100vh;
+  border: solid red;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 50vh;
+  width: 50vw;
+}
+
+.grid {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  border: solid black;
 }
