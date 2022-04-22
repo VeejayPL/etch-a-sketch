@@ -1,4 +1,11 @@
 const container = document.querySelector("#container");
-const divGrid = document.createElement("div");
-divGrid.classList.add("grid");
-container.appendChild(divGrid);
+
+function drawGrid(gridSize) {
+  container.style.gridTemplateColumns = `repeat(${gridSize}, auto)`;
+  for (let i = 0; i < gridSize * gridSize; i++) {
+    const square = container.appendChild(document.createElement("div"));
+    square.classList.add("box");
+  }
+}
+
+drawGrid(16);
