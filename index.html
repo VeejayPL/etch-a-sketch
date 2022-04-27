@@ -9,7 +9,20 @@
     <script src="./script.js" defer></script>
   </head>
   <body>
-    <button id="gridButton">Grid reset</button>
+    <div class="gridUi">
+      <div class="range">
+        <input
+          type="range"
+          name="gridSize"
+          id="gridSize"
+          min="0"
+          max="80"
+          value="16"
+        />
+        <p id="para" class="para">Grid size: 16 x 16</p>
+      </div>
+      <button id="gridButton">Grid reset</button>
+    </div>
     <div id="container" class="container"></div>
   </body>
 </html>

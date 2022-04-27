@@ -13,6 +13,24 @@ html {
   gap: 5vh;
 }
 
+.gridUi {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+.range {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.para {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-weight: bold;
+}
+
 .container {
   display: grid;
   height: 70vh;
