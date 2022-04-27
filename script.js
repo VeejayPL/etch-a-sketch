@@ -1,14 +1,25 @@
 const container = document.querySelector("#container");
 const gridButton = document.querySelector("#gridButton");
-let square;
+const range = document.querySelector("#gridSize");
+const para = document.querySelector("#para");
 
+// Append range value to display
+// Live grid size change
+range.addEventListener("input", () => {
+  const boxes = document.querySelectorAll(".box");
+  boxes.forEach((box) => {
+    box.remove();
+  });
+  drawGrid(range.value);
+  para.textContent = `Grid size: ${range.value} x ${range.value}`;
+});
 // Reset button with default drawGrid
 gridButton.addEventListener("click", () => {
   const boxes = document.querySelectorAll(".box");
   boxes.forEach((box) => {
     box.remove();
   });
-  drawGrid(16);
+  drawGrid(range.value);
 });
 
 // Draw the grid
@@ -23,4 +34,4 @@ function drawGrid(gridSize) {
   }
 }
 
-drawGrid(16);
+drawGrid(range.value);
